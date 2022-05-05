@@ -1,0 +1,511 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+:root{
+
+    --fontfamily : 'Be Vietnam Pro', sans-serif;
+    --fontsize : 12px ; 
+
+    --primarycolor: white;
+
+    --secondarycolor:#D46128 ; 
+}
+
+html{
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+body{
+
+background-color: rgba(22,26,31,255);
+font-size:var(--fontsize);
+color: var(--primarycolor);
+font-family: var(--fontfamily);
+
+}
+
+.updates{
+    margin: 2%  5%;
+}
+.updatesMain{
+padding: 30px 60px;
+background: linear-gradient(to bottom left,#343E4A,#4A5362 ) ;
+height: 360px;
+overflow-y: scroll;
+border-radius: 10px;
+}
+.features{
+    margin: 20px 0;
+}
+.orangeHeading{
+    color: var(--secondarycolor);
+    margin: 10px 0;
+
+}
+.date{
+    font-weight: 400;
+    border-bottom: 2px solid var(--secondarycolor);
+    
+}
+
+.fa-solid{
+    font-size: calc(var(--fontsize) + 5px)  ;
+    margin: 0 10px;
+}
+
+.features h4{
+    display: flex;
+     align-items: center;
+}
+.features h4 span{
+    font-size: calc(var(--fontsize) + 1px)  ;
+    font-weight: 400;
+}
+.features ul{
+    padding-left: 50px;
+    list-style: none;
+}
+.features ul li{
+    padding: 5px 10px;
+    position: relative;
+    font-weight: 400;
+}
+.features ul li:before{
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background-color: var(--secondarycolor);
+    border-radius: 50%;
+
+  
+}
+.features ul li span a{
+    color: var(--secondarycolor);
+    text-decoration: none;
+}
+
+
+.updatesMain::-webkit-scrollbar {
+    width: 53px;
+}
+.updatesMain::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 20px 20px var(--secondarycolor);
+    border: solid 23px transparent;
+    border-radius: 50px;
+}
+.updatesMain::-webkit-scrollbar-track {
+    margin-block: 10px;
+}
+
+
+.polls{
+ 
+        margin: 2%  5%;
+    
+}
+.pollsTop{
+    display: flex;
+    align-items: center;
+    
+}
+.button{
+    margin:  10px 50px;
+    background: none;
+    border: 1px solid var(--primarycolor);
+    white-space: nowrap;
+    border-radius: 5px;
+    font-family: var(--fontfamily);
+    font-size:calc(var(--fontsize) + 3px) ;
+    padding: 10px 20px;
+    font-weight: 400;
+    color: var(--primarycolor);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+.fa-angle-down{
+    font-size: var(--fontsize);
+    padding-left: 10px;
+}
+
+
+.pollsMain{
+    
+    
+    display: grid;
+   
+
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-column-gap: 15px;
+   
+   
+}
+.pol{
+    background: linear-gradient(to bottom left,#343E4A,#4A5362 ) ;
+    margin: 20px 0;
+    border-radius: 10px;
+    padding: 20px;
+    max-height: 480px;
+    overflow-y: scroll;
+    
+}
+
+
+.pol::-webkit-scrollbar {
+    width: 15px;
+}
+.pol::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 20px 20px var(--secondarycolor);
+    border: solid 5px transparent;
+    border-radius: 50px;
+}
+
+.pol::-webkit-scrollbar-track {
+    margin-block: 10px;
+}
+.pol h2{
+    font-weight: 500;
+    font-size: calc(var(--fontsize) + 2px)  ;
+}
+.pol h6{
+    margin: 10px 0;
+    font-size:calc(var(--fontsize) - 3px) ;
+    opacity: 0.7;
+    font-weight: 400;
+   
+}
+.pollBtn{
+    display: flex;
+    justify-content: center;
+   
+}
+.pollBtn button{
+   background-color: var(--secondarycolor);
+
+   color: white;
+   font-size: var(--fontsize);
+   font-family: var(--fontfamily);
+   border: none;
+   padding: 10px 40px;
+   cursor: pointer;
+  margin: 10px 0;
+  transition: all 200ms;
+  border-radius:5px;
+  white-space: nowrap;
+}
+.pollBtn button:hover{
+    background-color:#343e4a;
+  
+}
+.pollBtn button:active{
+    transform: translateY(2px);
+}
+
+.RadioInput {
+    display: none;
+}
+.RadioGroup{
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+}
+.RadioLabel {
+    font-size: var(--fontsize)  ;
+    cursor: pointer;
+    position: relative;
+    
+    margin: 5px 0;
+    padding-left: 35px;
+}
+
+.RadioButton {
+    height: 20px;
+    width: 20px;
+    border: 3px solid var(--secondarycolor);
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+}
+.checkboxBtn{
+    height: 20px;
+    width: 20px;
+    border: 2px solid var(--secondarycolor);
+    border-radius: 3px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: -3px;
+}
+.checkboxBtn:after{
+    border-radius: 0%;
+    content: "";
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 0%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--secondarycolor);
+    opacity: 0;
+    transition: opacity .2s;
+}
+.RadioButton::after {
+    content: "";
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--secondarycolor);
+    opacity: 0;
+    transition: opacity .2s;
+}
+.greyedoutBtn {
+    height: 20px;
+    width: 20px;
+    border: 2px solid var(--secondarycolor);
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: -3px;
+}
+.greyedoutBtn::after {
+    content: "";
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--secondarycolor);
+    transition: opacity .2s;
+
+}
+
+.noCircle::after{
+    
+    height: 0;
+    width: 0;
+    
+}
+
+
+
+.RadioInput:checked ~ .RadioLabel .RadioButton::after {
+    opacity: 1;
+   
+}
+.RadioInput:checked ~ .RadioLabel .checkboxBtn::after {
+    opacity: 1;
+   
+}
+.pol:last-child .RadioInput ~ .RadioLabel  {
+    opacity: .5;
+   
+   
+}
+.pol:nth-child(3) .RadioInput ~ .RadioLabel  {
+    opacity: .5;
+   
+   
+}
+
+
+
+.progressBar{
+    width: 100px;
+    height: 25px;
+    background-color: rgba(22,26,31,255);
+    border-radius: 20px;
+    color: white;
+    font-size: 9px;
+    margin-left: 5px;
+    position: relative;
+}
+.progressBar::before{
+    content: attr(data-label);
+    display: flex;
+    align-items: center;
+    position:absolute;
+    top: 4px;
+    left: 4px;
+    white-space: nowrap;
+    bottom: 4px;
+    padding-left: 10px;
+    width: calc(var(--width,0) * 1%);
+    max-width: calc(100% - 10px);
+    background-color: var(--secondarycolor);
+    border-radius: 25px;
+}
+
+
+.dropdown {
+    
+    position: absolute;
+    top:45px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 500;
+    width: 100%; 
+    text-align: center;
+    font-family:var(--fontfamily);
+    transform: scale(0);
+    transition: all 100ms;
+    transform-origin: top;
+    
+}
+.button:hover .dropdown{
+   
+    transform: scale(1);
+}
+    .dropdownList{
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(to right bottom , #3F4653 ,#0B0C0E);
+        border-radius: 10px;
+        list-style: none;
+        padding: 15px;
+    }
+    
+    .dropdown.open {
+      
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+
+    .dropdownItem {
+      color: black;
+      padding: 10px 0;
+      cursor: pointer;
+      color: white;
+      transition: all 200ms;
+      text-transform: uppercase;
+      font-size: var(--fontsize);
+      font-family: var(--fontfamily);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.226);
+      font-weight: 400;    
+}
+    .dropdownItem:last-child{
+        border-bottom: none;
+    }
+    
+        .dropdownItem a{
+          text-decoration: none;
+          color: white
+        }
+        
+        .dropdownItem:hover{
+           
+            color: var(--secondarycolor);
+           
+        }
+        .dropdownItem:active{
+            transform: translateY(2px);
+        }
+        .dropdown li{
+            display: flex;
+            align-items: center;
+        }
+        .dropdown li span{
+            padding: 0 10px;
+        }
+
+
+
+
+@media screen  and (min-width:1600px){
+  :root{
+    --fontsize:15px
+  }
+    
+}
+@media screen  and (max-width:995px){
+
+    :root{
+        --fontsize:13px
+    }
+  
+.pol{
+     padding: 20px 10px;
+ }
+
+  .RadioButton {
+    
+    top:-3px;
+
+}
+    
+}
+@media screen  and (max-width:679px){
+
+   
+ 
+  
+  .RadioLabel {
+    
+    padding-left: 35px;
+}
+
+.updatesMain {
+    padding: 20px 10px;
+}
+
+
+.updatesMain::-webkit-scrollbar {
+    width: 17px;
+}
+.updatesMain::-webkit-scrollbar-thumb {
+    
+    border: solid 5px transparent;
+    border-radius: 50px;
+}
+
+.progressBar{
+    
+    font-size: 9px;
+    
+}
+
+@media screen  and (max-width:630px){
+
+
+
+}
+
+
+@media screen  and (max-width:350px){
+
+    :root{
+        --fontsize:11px
+    }
+
+    .button {
+        margin: 10px 25px;
+    }
+
+}
